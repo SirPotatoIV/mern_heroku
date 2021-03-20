@@ -1,16 +1,22 @@
 const express = require('express');
 const path = require('path');
+const mongoose = require('mongoose');
+const morgan = rquire('morgan');
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 
 // Define middleware here
+app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 }
 
+// Connect mongoose to Atlas or your local MongoDB server
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/pokemon', {
   useNewUrlParser: true,
   useFindAndModify: false,
