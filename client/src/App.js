@@ -1,6 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 
+import About from './pages/About';
+import PokeCenter from './pages/PokeCenter';
+import Trainers from './pages/Trainers';
+
 import './App.css';
 
 export default function App() {
@@ -37,16 +41,4 @@ export default function App() {
       </div>
     </Router>
   );
-}
-
-function PokeCenter() {
-  return <h2>PokeCenter</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Trainers() {
-  return <h2>Trainers</h2>;
 }
