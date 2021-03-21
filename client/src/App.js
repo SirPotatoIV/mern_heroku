@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import About from './pages/About';
-import Login from './pages/Login';
+import Home from './pages/Home';
 import PokeCenter from './pages/PokeCenter';
 import Trainers from './pages/Trainers';
 
@@ -42,11 +42,7 @@ export default function App() {
               <Trainers />
             </PrivateRoute>
             <Route path="/">
-              {currentUser.isLoggedIn ? (
-                <Redirect to="pokecenter" />
-              ) : (
-                <Login />
-              )}
+              {currentUser.isLoggedIn ? <Redirect to="pokecenter" /> : <Home />}
             </Route>
           </Switch>
         </Router>
