@@ -11,7 +11,7 @@ import Login from './pages/Login';
 import PokeCenter from './pages/PokeCenter';
 import Trainers from './pages/Trainers';
 
-import { AuthContext } from './context/AuthContext';
+import AuthContext from './context/AuthContext';
 import Nav from './components/Nav';
 
 import './App.css';
