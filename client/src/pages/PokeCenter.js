@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../context/AuthContext';
 
 export default function PokeCenter() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const { trainer } = useContext(AuthContext);
+  console.log(trainer);
 
   const handleLogin = (e) => {
     e.preventDefault();
