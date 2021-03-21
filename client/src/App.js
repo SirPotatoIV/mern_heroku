@@ -20,7 +20,7 @@ export default function App() {
   const [currentUser, setCurrentUser] = useState({
     id: '1',
     username: 'Jake',
-    isLoggedIn: true,
+    isLoggedIn: false,
   });
 
   return (
