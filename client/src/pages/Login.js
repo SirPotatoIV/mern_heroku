@@ -5,12 +5,12 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const { username } = useContext(AuthContext);
-  console.log(username);
+  const { currentUser, setCurrentUser } = useContext(AuthContext);
+  console.log(currentUser);
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    setCurrentUser({ ...currentUser, isLoggedIn: true });
   };
   return (
     <div>
@@ -23,7 +23,6 @@ const Login = () => {
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
           />
         </div>
         <div>
@@ -33,7 +32,6 @@ const Login = () => {
             name="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
           />
         </div>
         <button type="submit">Login</button>

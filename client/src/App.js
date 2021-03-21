@@ -24,7 +24,7 @@ export default function App() {
   });
 
   return (
-    <AuthContext.Provider value={currentUser}>
+    <AuthContext.Provider value={{ currentUser, setCurrentUser }}>
       <Router>
         <div>
           <Nav />
