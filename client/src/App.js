@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import About from './pages/About';
 import PokeCenter from './pages/PokeCenter';
 import Trainers from './pages/Trainers';
 
-import AuthProvider from './context/AuthContext';
+import { AuthContext } from './context/AuthContext';
 import Nav from './components/Nav';
 
 import './App.css';
 
 export default function App() {
   return (
-    <AuthProvider>
+    <AuthContext.Provider
+      value={{ id: '1', username: 'Jake', isLoggedIn: false }}
+    >
       <Router>
         <div>
           <Nav />
@@ -32,6 +34,6 @@ export default function App() {
           </Switch>
         </div>
       </Router>
-    </AuthProvider>
+    </AuthContext.Provider>
   );
 }

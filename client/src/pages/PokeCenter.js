@@ -5,8 +5,8 @@ export default function PokeCenter() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const { trainer } = useContext(AuthContext);
-  console.log(trainer);
+  const { username } = useContext(AuthContext);
+  console.log(username);
 
   const handleLogin = (e) => {
     e.preventDefault();
