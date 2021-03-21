@@ -6,7 +6,10 @@ const Nav = () => {
     <nav>
       <ul>
         <li>
-          <Link to="/">PokeCenter</Link>
+          <Link to="/">Login</Link>
+        </li>
+        <li>
+          <Link to="/pokecenter">PokeCenter</Link>
         </li>
         <li>
           <Link to="/about">About</Link>

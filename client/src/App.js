@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from 'react-router-dom';
 
 import About from './pages/About';
 import Login from './pages/Login';
@@ -15,7 +20,7 @@ export default function App() {
   const [currentUser, setCurrentUser] = useState({
     id: '1',
     username: 'Jake',
-    isLoggedIn: false,
+    isLoggedIn: true,
   });
 
   return (
@@ -29,14 +34,18 @@ export default function App() {
             <Route path="/about">
               <About />
             </Route>
-            <Route path="pokecenter">
+            <Route path="/pokecenter">
               <PokeCenter />
             </Route>
             <Route path="/trainers">
               <Trainers />
             </Route>
             <Route path="/">
-              <Login />
+              {currentUser.isLoggedIn ? (
+                <Redirect to="pokecenter" />
+              ) : (
+                <Login />
+              )}
             </Route>
           </Switch>
         </div>
