@@ -12,6 +12,7 @@ import PokeCenter from './pages/PokeCenter';
 import Trainers from './pages/Trainers';
 
 import AuthContext from './context/AuthContext';
+import PrivateRoute from './components/PrivateRoute';
 import Nav from './components/Nav';
 
 import './App.css';
@@ -37,9 +38,9 @@ export default function App() {
             <Route path="/pokecenter">
               <PokeCenter />
             </Route>
-            <Route path="/trainers">
+            <PrivateRoute path="/trainers">
               <Trainers />
-            </Route>
+            </PrivateRoute>
             <Route path="/">
               {currentUser.isLoggedIn ? (
                 <Redirect to="pokecenter" />
