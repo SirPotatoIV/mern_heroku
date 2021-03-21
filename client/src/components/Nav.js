@@ -3,6 +3,8 @@ import { Link, useHistory } from 'react-router-dom';
 
 import AuthContext from '../context/AuthContext';
 
+import './Nav.css';
+
 const Nav = () => {
   const { currentUser, setCurrentUser } = useContext(AuthContext);
   const history = useHistory();
@@ -13,7 +15,7 @@ const Nav = () => {
   };
 
   return (
-    <nav>
+    <nav className="nav">
       <ul>
         <li>
           <Link to="/">Login</Link>

@@ -24,9 +24,9 @@ export default function App() {
   });
 
   return (
-    <AuthContext.Provider value={{ currentUser, setCurrentUser }}>
-      <Router>
-        <div>
+    <div className="App">
+      <AuthContext.Provider value={{ currentUser, setCurrentUser }}>
+        <Router>
           <Nav />
           {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
@@ -48,8 +48,8 @@ export default function App() {
               )}
             </Route>
           </Switch>
-        </div>
-      </Router>
-    </AuthContext.Provider>
+        </Router>
+      </AuthContext.Provider>
+    </div>
   );
 }
