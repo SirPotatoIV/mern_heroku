@@ -35,9 +35,9 @@ export default function App() {
             <Route path="/about">
               <About />
             </Route>
-            <Route path="/pokecenter">
+            <PrivateRoute path="/pokecenter">
               <PokeCenter />
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/trainers">
               <Trainers />
             </PrivateRoute>

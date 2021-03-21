@@ -24,10 +24,10 @@ const Nav = () => {
           <Link to="/pokecenter">PokeCenter</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/trainers">Trainers</Link>
         </li>
         <li>
-          <Link to="/trainers">Trainers</Link>
+          <Link to="/about">About</Link>
         </li>
         <li>
           <button onClick={handleSignout}>Sign Out</button>
