@@ -1,7 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+
+import AuthContext from '../context/AuthContext';
 
 const Nav = () => {
+  const { currentUser, setCurrentUser } = useContext(AuthContext);
+  const history = useHistory();
+
+  const handleSignout = () => {
+    setCurrentUser({ ...currentUser, isLoggedIn: false });
+    history.push('/');
+  };
+
   return (
     <nav>
       <ul>
@@ -16,6 +26,9 @@ const Nav = () => {
         </li>
         <li>
           <Link to="/trainers">Trainers</Link>
+        </li>
+        <li>
+          <button onClick={handleSignout}>Sign Out</button>
         </li>
       </ul>
     </nav>
