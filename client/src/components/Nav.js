@@ -29,9 +29,11 @@ const Nav = () => {
         <li>
           <Link to="/about">About</Link>
         </li>
-        <li>
-          <button onClick={handleSignout}>Sign Out</button>
-        </li>
+        {currentUser.isLoggedIn && (
+          <li>
+            <button onClick={handleSignout}>Sign Out</button>
+          </li>
+        )}
       </ul>
     </nav>
   );
