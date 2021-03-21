@@ -33,3 +33,12 @@ Your app should now be running on <http://localhost:3000>. The Express server sh
 ## Deployment
 
 The scripts listed in the root `package.json` are setup to inform Heroku on how to install the necessary node modules and build your React app. Deploying to Heroku can be accomplished with the Heroku CLI or by creating a Heroku app at heroku.com and connecting it to the GitHub repository for your whole app. There are other ways, but these are the two most common.
+
+## Resources Used
+
+- What is Morgan?: https://www.loggly.com/ultimate-guide/node-logging-basics/#:~:text=Morgan%20is%20a%20HTTP%20request,to%20manually%20create%20these%20logs.
+- Mongoose: https://mongoosejs.com/docs/
+- Mongoose with Express: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose
+- React Router: https://reactrouter.com/web/guides/quick-start
+- Private Routes & AuthContext: https://www.youtube.com/watch?v=unr4s3jd9qA
+-
